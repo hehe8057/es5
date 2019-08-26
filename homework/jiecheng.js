@@ -19,12 +19,15 @@ do{
 
 console.log(x);
 
-var a=1;
-function jc(x){
-    if(x==1){
+
+//递归
+function test(i){
+    if(i<1){
         return 1;
+    }else{
+        return test(i-1)*i;
     }
-    a=a*jc(x-1);
 }
-jc(10);
-console.log(a);
+
+var result = test(10);
+console.log(result);
